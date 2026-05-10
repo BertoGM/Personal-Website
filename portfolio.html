@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Website — Adalberto Gonzalez-Mendoza</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="container fade-up">
+
+        <a href="projects.html" style="
+            display:inline-flex;align-items:center;gap:0.4rem;
+            font-family:var(--mono-font);font-size:0.75rem;letter-spacing:0.08em;
+            text-transform:uppercase;color:var(--text-muted);text-decoration:none;
+            margin-bottom:2.5rem;
+            transition:color 0.2s;
+        " onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text-muted)'">
+            ← Back to Projects
+        </a>
+
+        <!-- Header -->
+        <div class="section-label">Web Project</div>
+        <h2 style="margin-bottom:0.5rem;">Portfolio Website</h2>
+        <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:2rem;">
+            HTML · CSS · JavaScript · GitHub Pages
+        </p>
+
+        <a href="index.html" class="btn btn-primary" style="margin-bottom:3rem;">
+            You're Looking At It →
+        </a>
+
+        <hr class="divider">
+
+        <!-- About + What it does -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:2.5rem;">
+
+            <div>
+                <div class="section-label" style="margin-bottom:0.75rem;">About the Project</div>
+                <p style="color:#a0a0bc;line-height:1.9;font-size:1rem;margin-bottom:1.2rem;">
+                    This is the site you're on right now. I built it from scratch without any frameworks or templates —
+                    just raw HTML, CSS, and JavaScript — as a way to own my presence on the web and practice
+                    front-end fundamentals outside of coursework.
+                </p>
+                <p style="color:#a0a0bc;line-height:1.9;font-size:1rem;">
+                    The design goal was to strike a balance between visual personality and clean readability — something
+                    that felt polished without being over-engineered. Every spacing decision, type choice, and animation
+                    was done by hand.
+                </p>
+            </div>
+
+            <div>
+                <div class="section-label" style="margin-bottom:0.75rem;">What's Included</div>
+                <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:0.6rem;">
+                    <li style="display:flex;gap:0.6rem;align-items:flex-start;color:#a0a0bc;font-size:0.95rem;">
+                        <span style="color:var(--accent2);margin-top:3px;">▸</span> Multi-page site — Home, About, Projects, Contact
+                    </li>
+                    <li style="display:flex;gap:0.6rem;align-items:flex-start;color:#a0a0bc;font-size:0.95rem;">
+                        <span style="color:var(--accent2);margin-top:3px;">▸</span> Dark theme with custom CSS variables and a subtle grid background
+                    </li>
+                    <li style="display:flex;gap:0.6rem;align-items:flex-start;color:#a0a0bc;font-size:0.95rem;">
+                        <span style="color:var(--accent2);margin-top:3px;">▸</span> Smooth fade-in animations on page load
+                    </li>
+                    <li style="display:flex;gap:0.6rem;align-items:flex-start;color:#a0a0bc;font-size:0.95rem;">
+                        <span style="color:var(--accent2);margin-top:3px;">▸</span> Individual project detail pages for each project
+                    </li>
+                    <li style="display:flex;gap:0.6rem;align-items:flex-start;color:#a0a0bc;font-size:0.95rem;">
+                        <span style="color:var(--accent2);margin-top:3px;">▸</span> Responsive layout that works across screen sizes
+                    </li>
+                    <li style="display:flex;gap:0.6rem;align-items:flex-start;color:#a0a0bc;font-size:0.95rem;">
+                        <span style="color:var(--accent2);margin-top:3px;">▸</span> Sticky frosted-glass nav bar with active state tracking
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <hr class="divider">
+
+        <!-- How it's built + Design decisions -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:0.5rem;">
+
+            <div>
+                <div class="section-label" style="margin-bottom:0.75rem;">How It's Built</div>
+                <p style="color:#a0a0bc;line-height:1.9;font-size:0.95rem;margin-bottom:1rem;">
+                    No frameworks, no build tools, no npm — just HTML files linked to a shared
+                    <code style="font-family:var(--mono-font);font-size:0.85em;color:var(--accent2);background:rgba(93,232,255,0.08);padding:1px 5px;border-radius:3px;">style.css</code>.
+                    The whole site is deployed on GitHub Pages and loads in under a second with zero JavaScript dependencies.
+                </p>
+                <p style="color:#a0a0bc;line-height:1.9;font-size:0.95rem;">
+                    Typography is set using Google Fonts — DM Serif Display for headings, Outfit for body text, and DM Mono
+                    for labels and code. Colors are managed through CSS custom properties for easy theming.
+                </p>
+            </div>
+
+            <div>
+                <div class="section-label" style="margin-bottom:0.75rem;">Design Decisions</div>
+                <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:0.7rem;">
+                    <li style="display:flex;gap:0.6rem;align-items:flex-start;color:#a0a0bc;font-size:0.92rem;">
+                        <span style="color:var(--accent);margin-top:3px;flex-shrink:0;">→</span>
+                        Dark background (#0d0d0f) to reduce eye strain and let the accent colors pop.
+                    </li>
+                    <li style="display:flex;gap:0.6rem;align-items:flex-start;color:#a0a0bc;font-size:0.92rem;">
+                        <span style="color:var(--accent);margin-top:3px;flex-shrink:0;">→</span>
+                        Green (#7fff6e) and cyan (#5de8ff) accents to avoid the generic purple-gradient AI aesthetic.
+                    </li>
+                    <li style="display:flex;gap:0.6rem;align-items:flex-start;color:#a0a0bc;font-size:0.92rem;">
+                        <span style="color:var(--accent);margin-top:3px;flex-shrink:0;">→</span>
+                        Serif + mono font pairing for a "technical editorial" feel — familiar but distinctive.
+                    </li>
+                    <li style="display:flex;gap:0.6rem;align-items:flex-start;color:#a0a0bc;font-size:0.92rem;">
+                        <span style="color:var(--accent);margin-top:3px;flex-shrink:0;">→</span>
+                        Project cards intentionally minimal — content-first, no decorative clutter.
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <hr class="divider">
+
+        <!-- What's next -->
+        <div style="margin-top:0.5rem;margin-bottom:3rem;">
+            <div class="section-label" style="margin-bottom:0.75rem;">What's Next</div>
+            <p style="color:#a0a0bc;line-height:1.9;font-size:0.95rem;max-width:660px;">
+                Planned updates include adding a dedicated résumé/CV page, improving mobile responsiveness on smaller
+                screens, expanding project pages with screenshots or embedded demos, and potentially adding a blog
+                section for writing about what I'm learning.
+            </p>
+        </div>
+
+        <a href="https://github.com/BertoGM" target="_blank" class="btn btn-primary">
+            View on GitHub →
+        </a>
+
+    </div>
+
+    <footer>
+        <p>© 2025 Adalberto Gonzalez-Mendoza</p>
+    </footer>
+
+</body>
+</html>

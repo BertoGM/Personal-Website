@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spellcraft Arena — Adalberto Gonzalez-Mendoza</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 0.5rem;
+        }
+        .feature-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.25rem 1.5rem;
+        }
+        .feature-card-title {
+            font-family: var(--mono-font);
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        .feature-card p {
+            font-size: 0.88rem;
+            color: #8888a8;
+            line-height: 1.7;
+            max-width: 100%;
+        }
+        .tech-pill {
+            display: inline-block;
+            font-family: var(--mono-font);
+            font-size: 0.72rem;
+            color: var(--accent2);
+            background: rgba(93, 232, 255, 0.08);
+            border: 1px solid rgba(93, 232, 255, 0.15);
+            border-radius: 4px;
+            padding: 0.3rem 0.7rem;
+            margin: 0.25rem;
+        }
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: var(--mono-font);
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #fb923c;
+            background: rgba(251, 146, 60, 0.08);
+            border: 1px solid rgba(251, 146, 60, 0.2);
+            border-radius: 4px;
+            padding: 0.35rem 0.8rem;
+            margin-bottom: 2rem;
+        }
+        .status-dot {
+            width: 6px; height: 6px;
+            border-radius: 50%;
+            background: #fb923c;
+            animation: pulse 2s ease infinite;
+        }
+        @keyframes pulse { 0%,100%{opacity:1}50%{opacity:0.4} }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="container fade-up">
+
+        <a href="projects.html" style="
+            display:inline-flex;align-items:center;gap:0.4rem;
+            font-family:var(--mono-font);font-size:0.75rem;letter-spacing:0.08em;
+            text-transform:uppercase;color:var(--text-muted);text-decoration:none;
+            margin-bottom:2.5rem;
+            transition:color 0.2s;
+        " onmouseover="this.style.color='var(--accent)'" onmouseout="this.style.color='var(--text-muted)'">
+            ← Back to Projects
+        </a>
+
+        <!-- Header -->
+        <div class="section-label">Game Dev — Unity</div>
+        <h2 style="margin-bottom:0.5rem;">Spellcraft Arena</h2>
+        <p style="color:var(--text-muted);font-size:0.9rem;margin-bottom:1.5rem;">
+            Unity · C# · Netcode for GameObjects · Mirror Networking
+        </p>
+
+        <div class="status-badge">
+            <div class="status-dot"></div>
+            Early Development
+        </div>
+
+        <hr class="divider">
+
+        <!-- About + Gameplay -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:2.5rem;">
+
+            <div>
+                <div class="section-label" style="margin-bottom:0.75rem;">About the Game</div>
+                <p style="color:#a0a0bc;line-height:1.9;font-size:1rem;margin-bottom:1.2rem;">
+                    Spellcraft Arena is a multiplayer fantasy battle royale where magic is your only weapon. Players
+                    drop into a shrinking arena, scavenge randomly spawned spells and abilities, and fight until one
+                    player remains — all in a fast-paced, chaotic environment where the best spell combination wins.
+                </p>
+                <p style="color:#a0a0bc;line-height:1.9;font-size:1rem;">
+                    The game is inspired by spell-based survival and battle royale mechanics — think Noita meets
+                    Spellbreak — with an emphasis on emergent gameplay through dynamic spell combinations, strategic
+                    positioning, and quick decision-making under pressure.
+                </p>
+            </div>
+
+            <div>
+                <div class="section-label" style="margin-bottom:0.75rem;">Core Gameplay</div>
+                <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:0.6rem;">
+                    <li style="display:flex;gap:0.6rem;align-items:flex-start;color:#a0a0bc;font-size:0.95rem;">
+                        <span style="color:var(--accent2);margin-top:3px;">▸</span> Battle royale format — last mage standing wins
+                    </li>
+                    <li style="display:flex;gap:0.6rem;align-items:flex-start;color:#a0a0bc;font-size:0.95rem;">
+                        <span style="color:var(--accent2);margin-top:3px;">▸</span> Shrinking map boundary forces players into conflict
+                    </li>
+                    <li style="display:flex;gap:0.6rem;align-items:flex-start;color:#a0a0bc;font-size:0.95rem;">
+                        <span style="color:var(--accent2);margin-top:3px;">▸</span> Randomly spawned spells and abilities across the map
+                    </li>
+                    <li style="display:flex;gap:0.6rem;align-items:flex-start;color:#a0a0bc;font-size:0.95rem;">
+                        <span style="color:var(--accent2);margin-top:3px;">▸</span> Dynamic spell combinations — chain effects for powerful synergies
+                    </li>
+                    <li style="display:flex;gap:0.6rem;align-items:flex-start;color:#a0a0bc;font-size:0.95rem;">
+                        <span style="color:var(--accent2);margin-top:3px;">▸</span> Loot progression — upgrade spells mid-match for increasing power
+                    </li>
+                    <li style="display:flex;gap:0.6rem;align-items:flex-start;color:#a0a0bc;font-size:0.95rem;">
+                        <span style="color:var(--accent2);margin-top:3px;">▸</span> Stylized fantasy world with fast, readable combat visuals
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <hr class="divider">
+
+        <!-- Feature cards -->
+        <div>
+            <div class="section-label" style="margin-bottom:1rem;">Key Systems</div>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-card-title">Spell Combination System</div>
+                    <p>Spells interact with each other — fire ignites oil slicks, lightning chains between wet enemies, wind redirects projectiles. Emergent combinations are the game's strategic heart.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-title">Multiplayer Networking</div>
+                    <p>Real-time multiplayer via Unity's Netcode for GameObjects. Players, projectiles, and spell effects are all synchronized across clients with lag compensation and server-authoritative logic.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-title">Shrinking Zone</div>
+                    <p>A classic battle royale safe zone that contracts over time — implemented as an animated boundary that deals escalating damage to players outside it, forcing increasingly intense encounters.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-card-title">Randomized Loot</div>
+                    <p>Spell drops, ability upgrades, and items spawn dynamically around the map on a weighted rarity table — so no two matches play out the same way.</p>
+                </div>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:0.5rem;">
+
+            <div>
+                <div class="section-label" style="margin-bottom:0.75rem;">Tech Stack</div>
+                <div style="margin-bottom:1.5rem;">
+                    <span class="tech-pill">Unity</span>
+                    <span class="tech-pill">C#</span>
+                    <span class="tech-pill">Netcode for GameObjects</span>
+                    <span class="tech-pill">Unity Physics</span>
+                    <span class="tech-pill">ScriptableObjects</span>
+                    <span class="tech-pill">Unity VFX Graph</span>
+                </div>
+                <p style="color:#a0a0bc;line-height:1.9;font-size:0.92rem;">
+                    ScriptableObjects are used extensively for spell definitions — each spell's behavior, visuals, and
+                    combination rules are data-driven, making it easy to add new spells without touching game logic.
+                </p>
+            </div>
+
+            <div>
+                <div class="section-label" style="margin-bottom:0.75rem;">What I'm Learning</div>
+                <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:0.7rem;">
+                    <li style="display:flex;gap:0.6rem;align-items:flex-start;color:#a0a0bc;font-size:0.92rem;">
+                        <span style="color:var(--accent);margin-top:3px;flex-shrink:0;">→</span>
+                        Real-time multiplayer architecture and network state synchronization
+                    </li>
+                    <li style="display:flex;gap:0.6rem;align-items:flex-start;color:#a0a0bc;font-size:0.92rem;">
+                        <span style="color:var(--accent);margin-top:3px;flex-shrink:0;">→</span>
+                        Data-driven game design with ScriptableObjects for modular spell systems
+                    </li>
+                    <li style="display:flex;gap:0.6rem;align-items:flex-start;color:#a0a0bc;font-size:0.92rem;">
+                        <span style="color:var(--accent);margin-top:3px;flex-shrink:0;">→</span>
+                        Balancing chaotic emergent gameplay while keeping matches fair and readable
+                    </li>
+                    <li style="display:flex;gap:0.6rem;align-items:flex-start;color:#a0a0bc;font-size:0.92rem;">
+                        <span style="color:var(--accent);margin-top:3px;flex-shrink:0;">→</span>
+                        Performance optimization for physics-heavy multiplayer scenes
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <hr class="divider">
+
+        <div style="margin-top:0.5rem;margin-bottom:3rem;">
+            <div class="section-label" style="margin-bottom:0.75rem;">Current Status</div>
+            <p style="color:#a0a0bc;line-height:1.9;font-size:0.95rem;max-width:660px;">
+                Currently in early development — core movement, basic spell casting, and a prototype shrinking zone
+                are implemented in a local build. Multiplayer networking is the current focus, getting reliable
+                synchronization working before expanding the spell system and map design. A playable demo is the
+                short-term milestone.
+            </p>
+        </div>
+
+        <a href="https://github.com/BertoGM" target="_blank" class="btn btn-primary">
+            View on GitHub →
+        </a>
+
+    </div>
+
+    <footer>
+        <p>© 2025 Adalberto Gonzalez-Mendoza</p>
+    </footer>
+
+</body>
+</html>
